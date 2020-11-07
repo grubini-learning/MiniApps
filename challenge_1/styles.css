@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+  font-size: 3em;
+}
+
+#board{
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  margin: 2% auto;
+  width: 80%;
+  height: 80vh;
+}
+
+#sectionOne, #sectionTwo, #sectionThree {
+  height: 100%;
+}
+
+#sectionOne {
+  flex: 1;
+}
+#sectionTwo {
+  flex: 1;
+}
+#sectionThree{
+  flex: 1;
+}
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  height: 33.33%;
+}
+
+#one {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+#two {
+  border-bottom: 2px solid black;
+}
+#five, #six, #eight, #nine{
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+#seven{
+  border-left: 2px solid black;
+}
