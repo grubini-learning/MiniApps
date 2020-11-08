@@ -1,0 +1,54 @@
+steps
+============================
+1. set up listen                                  check
+2. set up endpoint                                check
+3. get data and respond                           check
+3.1 sample data : {
+  "firstName": "Joshie",
+  "lastName": "Wyattson",
+  "county": "San Mateo",
+  "city": "San Mateo",
+  "role": "Broker",
+  "sales": 1000000,
+  "children": [
+    {
+      "firstName": "Beth Jr.",
+      "lastName": "Johnson",
+      "county": "San Mateo",
+      "city": "Pacifica",
+      "role": "Manager",
+      "sales": 2900000,
+      "children": [
+        {
+          "firstName": "Smitty",
+          "lastName": "Won",
+          "county": "San Mateo",
+          "city": "Redwood City",
+          "role": "Sales Person",
+          "sales": 4800000,
+          "children": []
+        }
+  ]
+}
+3.2 figure out what to do to transform it into a csv file.    check
+4. mold the data to what I need to for the csv                check
+5. write out the layout
+6. send the file back to be downloaded
+
+
+===========================================================
+3.2
+===========================================================
+let arrayHeader = ["Name","Country","Email"];
+let arrayData = ["Sigit Prasetya","Indonesia","sigit@gmail.com"];
+
+let csvContent = "data:text/csv;charset=utf-8,";
+
+rows.forEach(function(rowArray) {
+    let row = rowArray.join(",");
+    csvContent += row + "\r\n";
+});
+
+res.setHeader('Content-Type', 'text/csv');
+res.setHeader('Content-Disposition', 'attachment; filename=\"' + 'download-' + Date.now() + '.csv\"');
+

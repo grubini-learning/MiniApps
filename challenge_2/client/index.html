@@ -1,2 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="utf-8">
+    <title>CSV Generator</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
 
+  <body id="home">
+    <div id="wrapper">
+      <h1>CSV Generator</h1>
+      <form action="http://127.0.0.1:3000/sendData" method="POST">
+        <textarea name="data"></textarea>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="../node_modules/axios/dist/axios.min.js"></script>
+  </body>
+
+</html>
